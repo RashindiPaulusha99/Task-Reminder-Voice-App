@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Reminder Voice App</title>
+    
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/5920249.png" >
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-..."><!-- Paste the CSS link here -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+</head>
+<body class="bg-image" style=" overflow-x: hidden;" >
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center portfolio">
+
+        <div >
+            <div >
+                <h1 style="margin-bottom: 33px" class="logo me-auto"><a href="#">Task Reminder</a></h1>
+            </div>
+
+            <div >
+                <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter=".filter-app" class="me-5"><div id="btnAll" class="section-title">
+                        <h2 >All</h2>
+                    </div></li>
+                    <li data-filter=".filter-app"><div id="btnMonday" class="section-title">
+                        <h2 >Monday</h2>
+                    </div></li>
+                    <li data-filter=".filter-card"><div id="btnTuesday" class="section-title">
+                        <h2 >Tuesday</h2>
+                    </div></li>
+                    <li data-filter=".filter-web"><div id="btnWednesday" class="section-title">
+                        <h2>Wednesday</h2>
+                    </div></li>
+                    <li data-filter=".filter-web"><div id="btnThursday" class="section-title">
+                        <h2 >Thursday</h2>
+                    </div></li>
+                    <li data-filter=".filter-web"><div id="btnFriday" class="section-title">
+                        <h2 >Friday</h2>
+                    </div></li>
+                    <li data-filter=".filter-web"><div id="btnSaturday" class="section-title">
+                        <h2 >Saturday</h2>
+                    </div></li>
+                    <li data-filter=".filter-web"><div id="btnSunday" class="section-title">
+                        <h2 >Sunday</h2>
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+
+<main >
+
+    <Section id="homePage">
+        <!-- Section: Design Block -->
+        <section class="background-radial-gradient overflow-hidden">
+            <style>
+                .background-radial-gradient {
+                    height: 100vh;
+                    background-color: hsl(218, 41%, 15%);
+                    background-image: radial-gradient(650px circle at 0% 0%,
+                    hsl(218, 41%, 35%) 15%,
+                    hsl(218, 41%, 30%) 35%,
+                    hsl(218, 41%, 20%) 75%,
+                    hsl(218, 41%, 19%) 80%,
+                    transparent 100%),
+                    radial-gradient(1250px circle at 100% 100%,
+                            hsl(218, 41%, 45%) 15%,
+                            hsl(218, 41%, 30%) 35%,
+                            hsl(218, 41%, 20%) 75%,
+                            hsl(218, 41%, 19%) 80%,
+                            transparent 100%);
+                }
+
+                #radius-shape-1 {
+                    height: 220px;
+                    width: 220px;
+                    top: -60px;
+                    left: -130px;
+                    background: radial-gradient(#44006b, #ad1fff);
+                    overflow: hidden;
+                }
+
+                #radius-shape-2 {
+                    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                    bottom: -60px;
+                    right: -110px;
+                    width: 300px;
+                    height: 300px;
+                    background: radial-gradient(#44006b, #ad1fff);
+                    overflow: hidden;
+                }
+
+                .bg-glass {
+                    background-color: hsla(0, 0%, 100%, 0.9) !important;
+                    backdrop-filter: saturate(200%) blur(25px);
+                }
+            </style>
+
+            <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+                <div class="row align-items-center">
+                    <!--home page-->
+                    <div class="col-lg-6 homeHeading" style="z-index: 10">
+                        <!--hoe page image-->
+                        <img src="assets/images/5920249.png" style="position: relative;width: 100px; height: 100px">
+                        <!--main heading-->
+                        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                            Remi <br />
+                            <span style="color: hsl(218, 81%, 75%)">Task Reminder App</span>
+                        </h1>
+                        <!--sub heading-->
+                        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                            dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                            ab ipsum nisi dolorem modi. Quos?
+                        </p>
+                    </div>
+
+                    <!--add task button-->
+                    <button id="btnPlus" class="getstarted scrollto" style="position: fixed;bottom:20px;right:20px;width:60px;height: 60px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;">
+                        <i class="fas fa-duotone fa-calendar-plus fa-2x text-white" style="position: fixed;bottom:33px;right:36px;"></i>
+                    </button>
+
+                    <div class="col-lg-6 position-relative">
+                        <!--home page designs-->
+                        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong homeHeading"></div>
+                        <div id="radius-shape-2" class="position-absolute shadow-5-strong homeHeading"></div>
+
+                        <!--login page-->
+                        <div class="card bg-glass w-75" id="loginPage" style="position: relative;top: -30px">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <form>
+                                    <div class="row">
+                                        <!--login page heading-->
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <img src="assets/images/wise-reminder_icon.png" style="position: relative;width: 50px; height: 50px">
+                                            <span class="h1 fw-bold mb-0">Login</span>
+                                        </div>
+                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-3">
+                                        <input type="email" id="email" class="form-control" />
+                                        <label class="form-label" for="email">Email Address</label>
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="password" class="form-control" />
+                                        <label class="form-label" for="password">Password</label>
+                                    </div>
+
+                                    <!-- 2 column grid layout for inline styling -->
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <!-- Checkbox -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" checked />
+                                                <label class="form-check-label"> Remember me </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="button" id="btnLogin" class="btn mb-4 text-center btn-block w-100 text-white" style="background-image: radial-gradient(650px circle at 0% 0%,
+                    hsl(218, 41%, 35%) 15%,
+                    hsl(218, 41%, 30%) 35%,
+                    hsl(218, 41%, 20%) 75%,
+                    hsl(218, 41%, 19%) 80%,
+                    transparent 100%),
+                    radial-gradient(1250px circle at 100% 100%,
+                            hsl(218, 41%, 45%) 15%,
+                            hsl(218, 41%, 30%) 35%,
+                            hsl(218, 41%, 20%) 75%,
+                            hsl(218, 41%, 19%) 80%,
+                            transparent 100%);">
+                                        Sign in
+                                    </button>
+
+                                    <!-- Register buttons -->
+                                    <div class="text-center">
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Don't have an account?</p>
+                                            <button type="button" id="btnRegisterPage" class="btn border-2" style="border-color: #06357a">Create new</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--register page-->
+                        <div class="card bg-glass w-75"style="position: relative;top: -20px" id="registerPage">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <form>
+                                    <div class="row">
+                                        <!--register page heading-->
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <img src="assets/images/wise-reminder_icon.png" style="position: relative;width: 50px; height: 50px">
+                                            <span class="h1 fw-bold mb-0">Register</span>
+                                        </div>
+                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up to your account</h5>
+                                    </div>
+
+                                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-outline">
+                                                <input type="text" id="firstName" class="form-control" placeholder="John"/>
+                                                <label class="form-label" for="firstName">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-outline">
+                                                <input type="text" id="lastName" class="form-control" placeholder="Fernando"/>
+                                                <label class="form-label" for="lastName">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-3">
+                                        <input type="email" id="formEmail" class="form-control" placeholder="example@gmail.com"/>
+                                        <label class="form-label" for="formEmail">Email</label>
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-3">
+                                        <input type="password" id="formPassword" class="form-control" placeholder="....."/>
+                                        <label class="form-label" for="formPassword">Password</label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="button" id="btnRegister" class="btn mb-4 text-center btn-block w-100 text-white" style="background-image: radial-gradient(650px circle at 0% 0%,
+                    hsl(218, 41%, 35%) 15%,
+                    hsl(218, 41%, 30%) 35%,
+                    hsl(218, 41%, 20%) 75%,
+                    hsl(218, 41%, 19%) 80%,
+                    transparent 100%),
+                    radial-gradient(1250px circle at 100% 100%,
+                            hsl(218, 41%, 45%) 15%,
+                            hsl(218, 41%, 30%) 35%,
+                            hsl(218, 41%, 20%) 75%,
+                            hsl(218, 41%, 19%) 80%,
+                            transparent 100%);">
+                                        Sign up
+                                    </button>
+
+                                    <!-- Register buttons -->
+                                    <div class="text-center">
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Already have an account?</p>
+                                            <button type="button" id="btnLoginPage" class="btn border-2" style="border-color: #06357a">Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!--tasks table-->
+                    <div class=" mt-5 mt-lg-0 d-flex align-items-stretch">
+                        <div  id="table" style="overflow-y: scroll" class="php-email-form">
+                            <div data-aos="fade-up" class="row team section-bg">
+
+                                <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="100">
+                                    <table id="tblTasks" class="table table-hover" >
+
+                                        <tbody id="body"  >
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="addTaskBackground" style="background-color: rgba(0, 0, 0, 0.6); width: 100vw;height: 100vh;z-index: 1031;position: absolute;bottom: 0;right: 0;left: 0;top: 0;">
+                        <!--add task page-->
+                        <div id="addTaskPage">
+                            <div class=" d-flex align-items-stretch" style="margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0;width: 50%;z-index: 1032">
+                                <!--close icon-->
+                                <button id="btnCloseAddTask" class="getstarted scrollto" style="position: fixed;top:140px;right:0;left: 710px;margin: auto;width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
+                                    <i class="fas fas fa-times fa-1x text-white" style="position: fixed;top:146px;right:0;left: 710px;"></i>
+                                </button>
+                                <!--form-->
+                                <form action="" method="post" role="form" class="php-email-form" style="height: 65vh;margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0">
+                                    <div class="row">
+                                        <!--heading-->
+                                        <div class="col-md-12 mb-2">
+                                            <h1 style="font-size: 30px; color: #209dd8" class="text-center logo me-auto">Add Task</h1>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <!--date-->
+                                            <label for="date">Date</label>
+                                            <div class="col-10">
+                                                <input type="date" name="date" class="form-control" id="date" required>
+                                            </div>
+                                        </div>
+
+                                        <!--time-->
+                                        <div class="form-group col-md-6">
+                                            <!--heading-->
+                                            <label for="time">Time Reminder</label>
+                                            <div class="col-md-10">
+                                                <input type="time" class="form-control" name="time" id="time" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--task-->
+                                    <div class="form-group col-md-12">
+                                        <!--heading-->
+                                        <label for="task">Task</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <textarea class="form-control" id="task" name="task" rows="5" required></textarea>
+                                            </div>
+                                            <!--voice button-->
+                                            <div class="col-2">
+                                                <button id="btnVoiceTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
+                                                    <i class="fas fad fa-microphone fa-2x " style="color: #209dd8;"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--reminder button-->
+                                    <div class="text-center"><button style="background-color: #209dd8;color: white;transition: 0.4s;border-radius: 50px;padding-top: 12px;padding-bottom: 12px;padding-left: 34px;padding-right: 34px;border-color: transparent" id="btnAddTask" type="button">Reminder</button></div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--edit task page-->
+                        <div id="editTaskPage">
+                        <div class=" d-flex align-items-stretch" style="margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0;width: 50%;z-index: 1031">
+                            <!--close button-->
+                            <button id="btnCloseEditTask" class="getstarted scrollto" style="position: fixed;top:124px;right:0;left: 710px;margin: auto;width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
+                                <i class="fas fas fa-times fa-1x text-white" style="position: fixed;top:132px;right:0;left: 710px;"></i>
+                            </button>
+                            <!--form-->
+                            <form action="" method="post" role="form" class="php-email-form" style="height: 72vh;margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0">
+                                <div class="row">
+                                    <!--heading-->
+                                    <div class="col-md-12 mb-2">
+                                        <h1 style="font-size: 30px; color: #209dd8" class="text-center logo me-auto">Edit Task</h1>
+                                    </div>
+                                    <!--date-->
+                                    <div class="form-group col-md-6 mb-1">
+                                        <!--heading-->
+                                        <label for="editDate">Date</label>
+                                        <div class="col-10">
+                                            <input type="date" name="editDate" class="form-control" id="editDate" required>
+                                        </div>
+                                    </div>
+
+                                    <!--time-->
+                                    <div class="form-group col-md-6 mb-1">
+                                        <!--heading-->
+                                        <label for="editTime">Time Reminder</label>
+                                        <div class="col-md-10">
+                                            <input type="time" class="form-control" name="editTime" id="editTime" required>
+                                        </div>
+                                    </div>
+
+                                    <!--status-->
+                                    <div class="form-group col-md-6 mb-0">
+                                        <!--heading-->
+                                        <label for="status">Task Status</label>
+                                        <div class="col-md-10">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size: 15px" id="status">
+                                                <option value="1">COMPLETED</option>
+                                                <option value="2">DUE TODAY</option>
+                                                <option value="3">UPCOMING</option>
+                                                <option value="4">MISSING</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!--task-->
+                                <div class="form-group col-md-12">
+                                    <!--heading-->
+                                    <label for="editTask">Task</label>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <textarea class="form-control" id="editTask" name="editTask" rows="5" required></textarea>
+                                        </div>
+                                        <!--voice button-->
+                                        <div class="col-2">
+                                            <button id="btnVoiceEditTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
+                                                <i class="fas fad fa-microphone fa-2x " style="color: #209dd8;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--edit  reminder button-->
+                                <div class="text-center"><button style="background-color: #209dd8;color: white;transition: 0.4s;border-radius: 50px;padding-top: 12px;padding-bottom: 12px;padding-left: 34px;padding-right: 34px;border-color: transparent" id="btnEditTask" type="button">Edit Reminder</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- Section: Design Block -->
+    </Section>
+
+</main>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+<script src="controller/DashboardController.js"></script>
+<script src="controller/LoginController.js"></script>
+<script src="controller/TodoController.js"></script>
+
+
+</body>
+</html>

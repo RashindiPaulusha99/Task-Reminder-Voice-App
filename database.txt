@@ -1,0 +1,21 @@
+drop database if exists taskreminder;
+create database if not exists taskreminder;
+
+drop table if exists todo;
+create table if not exists todo(
+	tId INT AUTO_INCREMENT NOT NULL,
+	task TEXT NOT NULL,
+	date DATE NOT NULL,
+	time TIME NOT NULL,
+	CONSTRAINT PRIMARY KEY(tId)	
+);
+
+drop table if exists login;
+create table if not exists login(
+	rId INT AUTO_INCREMENT,
+	firstName VARCHAR(100) NOT NULL,
+	lastName VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	CONSTRAINT PRIMARY KEY(rId)
+);
