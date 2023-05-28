@@ -165,7 +165,7 @@ function tableRows(responseKey) {
     let raw = `<tr><td>
                         <div class="member d-flex align-items-start">
                                 <div class="w-25 h-100 row" style="border-right: 2px solid #37517e">
-                                    <div class="row text-center pt-3"><h1 id="day" style="color: steelblue">${checkDate(responseKey.date)}</h1></div>
+                                    <div class="row text-center pt-3"><h1 id="day" style="color: #37517e">${checkDate(responseKey.date)}</h1></div>
                                     <div class="row text-center"><h2 id="month" style="color: steelblue">${getDayOfWeek(responseKey.date)}</h2></div>
                                 </div>
                                 <br>
