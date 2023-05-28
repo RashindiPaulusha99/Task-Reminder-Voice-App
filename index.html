@@ -133,8 +133,8 @@
                     </div>
 
                     <!--add task button-->
-                    <button id="btnPlus" class="getstarted scrollto" style="position: fixed;bottom:20px;right:20px;width:60px;height: 60px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;">
-                        <i class="fas fa-duotone fa-calendar-plus fa-2x text-white" style="position: fixed;bottom:33px;right:36px;"></i>
+                    <button type="button" id="btnPlus" class="btn-lg btn-floating" style="position: fixed;bottom:20px;right:20px;width:60px;height: 60px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;">
+                        <i class="fas fa-duotone fa-calendar-plus fa-1x text-white" style="position: fixed;bottom:40px;right:40px;"></i>
                     </button>
 
                     <div class="col-lg-6 position-relative">
@@ -298,16 +298,19 @@
                         <!--add task page-->
                         <div id="addTaskPage">
                             <div class=" d-flex align-items-stretch" style="margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0;width: 50%;z-index: 1032">
-                                <!--close icon-->
-                                <button id="btnCloseAddTask" class="getstarted scrollto" style="position: fixed;top:140px;right:0;left: 710px;margin: auto;width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
-                                    <i class="fas fas fa-times fa-1x text-white" style="position: fixed;top:146px;right:0;left: 710px;"></i>
-                                </button>
+
                                 <!--form-->
                                 <form action="" method="post" role="form" class="php-email-form" style="height: 65vh;margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0">
                                     <div class="row">
                                         <!--heading-->
-                                        <div class="col-md-12 mb-2">
+                                        <div class="col-md-10 mb-2 ">
                                             <h1 style="font-size: 30px; color: #209dd8" class="text-center logo me-auto">Add Task</h1>
+                                        </div>
+                                        <div class="col-md-2 d-flex justify-content-end">
+                                            <!--close icon-->
+                                            <button id="btnCloseAddTask" class="getstarted scrollto" style="width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
+                                                <i class="fas fas fa-times fa-1x text-white" ></i>
+                                            </button>
                                         </div>
 
                                         <div class="form-group col-md-6">
@@ -334,11 +337,11 @@
                                         <label for="task">Task</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <textarea class="form-control" id="task" name="task" rows="5" required></textarea>
+                                                <textarea type="text" class="form-control" id="task" name="task" rows="5" required placeholder="Eg: I have meeting."></textarea>
                                             </div>
                                             <!--voice button-->
                                             <div class="col-2">
-                                                <button id="btnVoiceTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
+                                                <button type="button" id="btnVoiceTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
                                                     <i class="fas fad fa-microphone fa-2x " style="color: #209dd8;"></i>
                                                 </button>
                                             </div>
@@ -353,74 +356,76 @@
 
                         <!--edit task page-->
                         <div id="editTaskPage">
-                        <div class=" d-flex align-items-stretch" style="margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0;width: 50%;z-index: 1031">
-                            <!--close button-->
-                            <button id="btnCloseEditTask" class="getstarted scrollto" style="position: fixed;top:124px;right:0;left: 710px;margin: auto;width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
-                                <i class="fas fas fa-times fa-1x text-white" style="position: fixed;top:132px;right:0;left: 710px;"></i>
-                            </button>
-                            <!--form-->
-                            <form action="" method="post" role="form" class="php-email-form" style="height: 72vh;margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0">
-                                <div class="row">
-                                    <!--heading-->
-                                    <div class="col-md-12 mb-2">
-                                        <h1 style="font-size: 30px; color: #209dd8" class="text-center logo me-auto">Edit Task</h1>
-                                    </div>
-                                    <!--date-->
-                                    <div class="form-group col-md-6 mb-1">
-                                        <!--heading-->
-                                        <label for="editDate">Date</label>
-                                        <div class="col-10">
-                                            <input type="date" name="editDate" class="form-control" id="editDate" required>
-                                        </div>
-                                    </div>
-
-                                    <!--time-->
-                                    <div class="form-group col-md-6 mb-1">
-                                        <!--heading-->
-                                        <label for="editTime">Time Reminder</label>
-                                        <div class="col-md-10">
-                                            <input type="time" class="form-control" name="editTime" id="editTime" required>
-                                        </div>
-                                    </div>
-
-                                    <!--status-->
-                                    <div class="form-group col-md-6 mb-0">
-                                        <!--heading-->
-                                        <label for="status">Task Status</label>
-                                        <div class="col-md-10">
-                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size: 15px" id="status">
-                                                <option value="1">COMPLETED</option>
-                                                <option value="2">DUE TODAY</option>
-                                                <option value="3">UPCOMING</option>
-                                                <option value="4">MISSING</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!--task-->
-                                <div class="form-group col-md-12">
-                                    <!--heading-->
-                                    <label for="editTask">Task</label>
+                            <div class=" d-flex align-items-stretch" style="margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0;width: 50%;z-index: 1031">
+                                <!--form-->
+                                <form action="" method="post" role="form" class="php-email-form" style="height: 72vh;margin: auto;position: absolute;bottom: 0;right: 0;left: 0;top: 0">
                                     <div class="row">
-                                        <div class="col-10">
-                                            <textarea class="form-control" id="editTask" name="editTask" rows="5" required></textarea>
+                                        <!--heading-->
+                                        <div class="col-md-10 mb-2">
+                                            <h1 style="font-size: 30px; color: #209dd8" class="text-center logo me-auto">Edit Task</h1>
                                         </div>
-                                        <!--voice button-->
-                                        <div class="col-2">
-                                            <button id="btnVoiceEditTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
-                                                <i class="fas fad fa-microphone fa-2x " style="color: #209dd8;"></i>
+                                        <div class="col-md-2 d-flex justify-content-end">
+                                            <!--close button-->
+                                            <button type="button" id="btnCloseEditTask" class="getstarted scrollto" style="width:30px;height: 30px;border-radius: 100%; background-color: #3C91E6;border-color: transparent;z-index: 1032">
+                                                <i class="fas fas fa-times fa-1x text-white" ></i>
                                             </button>
                                         </div>
-                                    </div>
-                                </div>
+                                        <!--date-->
+                                        <div class="form-group col-md-6 mb-1">
+                                            <!--heading-->
+                                            <label for="editDate">Date</label>
+                                            <div class="col-10">
+                                                <input type="date" name="editDate" class="form-control" id="editDate" required>
+                                            </div>
+                                        </div>
 
-                                <!--edit  reminder button-->
-                                <div class="text-center"><button style="background-color: #209dd8;color: white;transition: 0.4s;border-radius: 50px;padding-top: 12px;padding-bottom: 12px;padding-left: 34px;padding-right: 34px;border-color: transparent" id="btnEditTask" type="button">Edit Reminder</button></div>
-                            </form>
+                                        <!--time-->
+                                        <div class="form-group col-md-6 mb-1">
+                                            <!--heading-->
+                                            <label for="editTime">Time Reminder</label>
+                                            <div class="col-md-10">
+                                                <input type="time" class="form-control" name="editTime" id="editTime" required>
+                                            </div>
+                                        </div>
+
+                                        <!--status-->
+                                        <div class="form-group col-md-6 mb-0">
+                                            <!--heading-->
+                                            <label for="status">Task Status</label>
+                                            <div class="col-md-10">
+                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="font-size: 15px" id="status">
+                                                    <option value="1">COMPLETED</option>
+                                                    <option value="2">DUE TODAY</option>
+                                                    <option value="3">UPCOMING</option>
+                                                    <option value="4">MISSING</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--task-->
+                                    <div class="form-group col-md-12">
+                                        <!--heading-->
+                                        <label for="editTask">Task</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <textarea type="text" class="form-control" id="editTask" name="editTask" rows="5" required placeholder="Eg: I have meeting."></textarea>
+                                            </div>
+                                            <!--voice button-->
+                                            <div class="col-2">
+                                                <button type="button" id="btnVoiceEditTask" class="getstarted scrollto" style="z-index: 1032;border-color: transparent;background-color: transparent;padding-top: 49px">
+                                                    <i class="fas fad fa-microphone fa-2x " style="color: #209dd8;"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--edit  reminder button-->
+                                    <div class="text-center"><button style="background-color: #209dd8;color: white;transition: 0.4s;border-radius: 50px;padding-top: 12px;padding-bottom: 12px;padding-left: 34px;padding-right: 34px;border-color: transparent" id="btnEditTask" type="button">Edit Reminder</button></div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                 </div>

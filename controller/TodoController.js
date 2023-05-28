@@ -193,7 +193,7 @@ function loadAllTodos(day) {
         crossDomain: true,
         contentType: "application/json",
         success: function (response) {
-            console.log(response.data)
+
             $("#tblTasks tbody").empty();
 
             if (day == "all"){
@@ -297,3 +297,45 @@ function deleteTask(id) {
 
     }
 }
+
+$('#btnVoiceTask').on('click', function() {
+
+    var speech = true;
+    window.SpeechRecognition = window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result',ev => {
+        const transcript = Array.from(ev.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+
+        $("#task").val(transcript);
+    })
+
+    if (speech == true){
+        recognition.start();
+    }
+
+});
+
+$('#btnVoiceEditTask').on('click', function() {
+
+    var speech = true;
+    window.SpeechRecognition = window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result',ev => {
+        const transcript = Array.from(ev.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+
+        $("#editTask").val(transcript);
+    })
+
+    if (speech == true){
+        recognition.start();
+    }
+
+});
