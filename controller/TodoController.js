@@ -61,6 +61,7 @@ $("#btnAddTask").click(function (event) {
                     alert(statusText);
                 }
             });
+
         }else {
             $("#addTaskPage").css('display', 'none');
             $("#addTaskBackground").css('display', 'none');

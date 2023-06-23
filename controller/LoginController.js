@@ -39,6 +39,62 @@ $("#btnRegister").click(function () {
     }
 });
 
+// Call the announceTasks function every 1 minute (60000 milliseconds)
+setInterval(announceTasks, 20000);
+
+function announceTasks() {
+    var currentDate = new Date();
+
+    // Get the year, month, and day from the current date
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // Note: Months are zero-based, so January is 0
+    var day = currentDate.getDate();
+
+    // Format the date as 'YYYY-MM-DD'
+    var formattedDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
+
+    // Get the hours, minutes, and seconds from the current time
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+
+    // Format the time as 'HH:MM:SS'
+    var formattedTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + '00';
+
+    $.ajax({
+        url: "http://127.0.0.1:5000/get/todos",
+        method: "GET",
+        crossDomain: true,
+        contentType: "application/json",
+        success: function (response) {
+            if (response.status == 200){
+                for (var responseKey of response.data) {
+
+                    if (responseKey.date == formattedDate && responseKey.time == formattedTime){
+                        speakText(responseKey.task);
+                    }
+                }
+            }
+        },
+        error: function (ob) {
+        }
+    });
+
+}
+
+// Function to speak the provided text using text-to-speech
+function speakText(text) {
+    if ('speechSynthesis' in window) {
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = text.replace(/\bI\b/g, 'you').replace(/\bmy\b/g, 'your');
+        msg.rate = 0.5;
+        window.speechSynthesis.speak(msg);
+    } else {
+        // Speech synthesis not supported
+        console.log('Speech synthesis is not supported in this browser.');
+    }
+}
+
 $("#btnLogin").click(function () {
 
     if ($("#email").val() == "" || $("#password").val() == ""){
@@ -66,6 +122,8 @@ $("#btnLogin").click(function () {
                     $("#header").css('display','block');
                     $("#btnPlus").css('display','block');
                     $("#table").css('display','block');
+
+                    announceTasks()
 
                 }else if (response.status == 401){
                     alert(response.message)
