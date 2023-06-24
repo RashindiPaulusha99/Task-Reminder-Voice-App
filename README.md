@@ -11,7 +11,7 @@ Also this is the Machine Learning project.
 
 ![todo](assets/images/todos.png)
 
-![todo](assets/images/add task.png)
+![todo](assets/images/addtask.png)
 
 # *Introduction* 📝
 This app outlines the development of a Task Reminder Voice App, designed
