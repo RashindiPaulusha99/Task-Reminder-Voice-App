@@ -3,7 +3,7 @@
 
  * Presentation link : https://drive.google.com/file/d/1pp-ZeClLUiBlft1xwJLgXGEvvTnbJbBk/view?usp=sharing
 
-Also this is the Machine Learning and python project.
+Also this is the Machine Learning project.
 
 <h3 align="center"><a href="https://git.io/typing-svg" align="center"><img align="center" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=4000&center=true&vCenter=true&width=435&lines=Task+Reminder+Voice+App" alt="Typing SVG" style="max-width:100%" /></a></h3>
 
