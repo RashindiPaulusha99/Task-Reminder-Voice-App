@@ -62,4 +62,6 @@ Below you can see the languages,frameworks architectures, tools I used  the proj
 ## Other
 
 * AWS
+  * RDS
+  * EC2
 
